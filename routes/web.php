@@ -1,5 +1,6 @@
 <?php
 
+use App\Cars\Truck;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //dd(get_declared_classes());
+
+    return view('file_upload');
 });
+Route::put('/files_store', 'App\Http\Controllers\CarsController@store')->name('store');
